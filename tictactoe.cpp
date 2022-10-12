@@ -1,5 +1,13 @@
 #include <iostream>
-#include "ttt.hpp"
+bool is_winner();
+bool filled_up();
+void introduction();
+void take_turn();
+void set_position();
+void update_board();
+void change_player();
+void draw();
+void end_game();
 
 std::string board[9] = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
 int player = 1;
@@ -183,4 +191,11 @@ void end_game()
   {
     std::cout << "Tie!\n";
   }
+}
+
+int main()
+{
+  introduction();
+  take_turn();
+  end_game();
 }
